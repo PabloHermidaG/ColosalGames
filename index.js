@@ -90,7 +90,7 @@ window.addEventListener('load', async function() {
 });
 
 async function obtenerMensajes(){
-  let aux = [datosTitulo[5][1],datosTitulo[6][1]]
+  let aux = [datosTitulo[4][1],datosTitulo[5][1]]
 
   return aux;
 }
