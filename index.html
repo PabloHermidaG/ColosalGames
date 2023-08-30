@@ -12,30 +12,7 @@
         <div class="instructions" id="instructions"></div>
         <div class="form" id="form">
         <input id="answerBox" style="flex-grow: 1;" onkeydown="if(event.keyCode===13) { document.getElementById('submitButton').click(); }">
-        <input type="button" value="Enviar" id="submitButton" 
-    
-            onClick="google.script.run.withSuccessHandler(
-            function(resultado) 
-            { 
-            //Imprimimos los resultados en consola siempre para que en caso de error poder ver que ha fallado
-            //console.log(resultado);
-    
-            //Si lo que nos ha devuelto no es un json conteniendo el objeto tabla
-            if(resultado.resena != null){
-                document.getElementById('result').innerHTML = resultado.resena; 
-                document.getElementById('personal').innerHTML = resultado.personal; 
-                document.getElementById('clubResults').innerHTML = Object.values(resultado.clubes).join('');
-                document.getElementById('form').style.display = 'none';
-                instructions.style.display = 'none';
-                botonReset.style.display = 'block';
-            }else{
-                document.getElementById('result').innerHTML = resultado;
-                document.getElementById('clubResults').innerHTML = '';
-            }
-            })
-            .extraerInformacion(document.getElementById('answerBox').value);" 
-            
-            style="flex-shrink: 0;"
+        <input type="button" value="Enviar" id="submitButton" style="flex-shrink: 0;"
         >
         </div>
         <p></p>
