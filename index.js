@@ -50,7 +50,7 @@ function convertData(datos) {
   }
 
   return aux;
-}
+} 
 
 window.addEventListener('load', async function() {
 
