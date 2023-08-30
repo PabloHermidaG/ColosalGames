@@ -49,8 +49,6 @@ function convertData(datos) {
     aux.push(aux2);
   }
 
-  console.log(aux);
-
   return aux;
 }
 
@@ -61,24 +59,6 @@ window.addEventListener('load', async function() {
   .then(rep => {
     datosTitulo = convertData(rep);
   })
-
-  await fetch(RESENA_URL)
-    .then(res => res.text())
-    .then(rep => {
-      datosResena = convertData(rep);
-    })
-
-  await fetch(PERSONAL_URL)
-    .then(res => res.text())
-    .then(rep => {
-      datosPersonal = convertData(rep);
-    })
-
-  await fetch(GRUPOS_URL)
-    .then(res => res.text())
-    .then(rep => {
-      datosGrupos = convertData(rep);
-    })
     
     mensajesAUtilizar = await obtenerMensajes();
 
@@ -103,8 +83,8 @@ window.addEventListener('load', async function() {
         document.getElementById('clubResults').innerHTML = '';
     });
 
-    document.getElementById("submitButton").addEventListener("click", function(){
-      let datos = extraerInformacion(document.getElementById('answerBox').value)
+    document.getElementById("submitButton").addEventListener("click", async function(){
+      let datos = await extraerInformacion(document.getElementById('answerBox').value)
       mostrarResultado(datos);
     });
 });
@@ -115,7 +95,32 @@ async function obtenerMensajes(){
   return aux;
 }
 
-function extraerInformacion(email_input) {  
+async function extraerInformacion(email_input) {  
+
+  await fetch(TITLE_URL)
+  .then(res => res.text())
+  .then(rep => {
+    datosTitulo = convertData(rep);
+  })
+
+  await fetch(RESENA_URL)
+    .then(res => res.text())
+    .then(rep => {
+      datosResena = convertData(rep);
+    })
+
+  await fetch(PERSONAL_URL)
+    .then(res => res.text())
+    .then(rep => {
+      datosPersonal = convertData(rep);
+    })
+
+  await fetch(GRUPOS_URL)
+    .then(res => res.text())
+    .then(rep => {
+      datosGrupos = convertData(rep);
+    })
+
   mensajes = [datosTitulo[4][1],datosTitulo[5][1],datosTitulo[6][1],datosTitulo[7][1]]
   //email_input = "lfhg0001@gmail.com"; //Utilizar para hacer pruebas de ejecucion en el logger
 
@@ -145,6 +150,10 @@ function extraerInformacion(email_input) {
 
   var tablasHTMLClubes = formatearTablasClubes(tablasClubes,email_input);
 
+  if (!esFechaPasada(convertirNumeroASFecha(datosGrupos[0][5]))) {
+    tablasHTMLClubes = "";
+  }
+
   //Logger.log(tablasHTMLClubes);
 
   var resultado = {
@@ -162,12 +171,17 @@ function extraerInformacion(email_input) {
 */
 
 function formatearTablaPersonal(valores){
+
+  console.log(valores);
+
   var outputHtml = "<table class='tabla-club'><tr>";
 
-  var fechas = datosPersonal[1].slice(1);
+  var fechas = datosPersonal[0].slice(1);
+
+  console.log(fechas);
   
   // Agregar los títulos de las columnas (primer elemento del array)
-  var titles = valores[0].slice(1); // Excluir el primer elemento
+  var titles = datosPersonal[18].slice(1,4); // Excluir el primer elemento
   for (var i = 0; i < titles.length; i++) {
     if(titles[i] != ""){
       outputHtml += "<th>" + titles[i] + "</th>";
@@ -177,15 +191,19 @@ function formatearTablaPersonal(valores){
   
   // Procesar el resto del array en grupos de 3
   var dataRow = valores[1].slice(1); // Excluir el primer elemento
+
   for (var j = 0; j < dataRow.length; j += 3) {
+
+    fechas[j] = new Date(fechas[j]);
+
     if(esFechaPasada(fechas[j])){
       if(j > dataRow.length-4){
-      outputHtml += "<tr class='bold'>";
+        outputHtml += "<tr class='bold'>";
       }else{
         outputHtml += "<tr>";
       }
       for (var k = j; k < j + 3; k++) {
-        if (dataRow[k] !== undefined) {
+        if (dataRow[k] !== null) {
           outputHtml += "<td>" + dataRow[k] + "</td>";
         } else {
           outputHtml += "<td></td>"; // Agregar celdas vacías si no hay más elementos
@@ -234,9 +252,11 @@ function obtenerTituloResena(){
 }
 
 function esFechaPasada(fecha){
+  fecha = new Date(fecha);
+
   let fechaActual = new Date();
 
-  // Comparar las fechas
+ // Comparar las fechas
   if (fecha < fechaActual) {
     return true;
   } else {
@@ -288,6 +308,12 @@ function formatearTablaResena(registro) {
   return tablaHTML;
 }
 
+function convertirNumeroASFecha(numero) {
+  let fecha = new Date((numero - 25569) * 86400 * 1000);
+  // Ajustar la zona horaria a tu zona horaria local
+  fecha.setTime(fecha.getTime() + new Date().getTimezoneOffset() * 60 * 1000);
+  return fecha;
+}
 
 function obtenerClubesInput(registro, email_input) {
   let aux = false;
@@ -345,16 +371,16 @@ function obtenerClubesInput(registro, email_input) {
 function obtenerTablasClubes(valores, clubesInput) {
   var tablasClubes = {};
 
-  let fechaViernes = valores[0][0];
-  let fechaSabado = valores[0][1];
-  let fechaDomingo = valores[0][2];
+  let fechaViernes = convertirNumeroASFecha(valores[0][3]);
+  let fechaSabado = convertirNumeroASFecha(valores[0][4]);
+  let fechaDomingo = convertirNumeroASFecha(valores[0][5]);
 
   let fechas = [fechaViernes,fechaSabado,fechaDomingo];
 
   let aux = 0;
 
   for(let i = 0; i < fechas.length; i++){
-    if(esFechaPasada(Date(fechas[i]))){
+    if(esFechaPasada(fechas[i])){
       aux = i;
     }
   }
@@ -371,11 +397,13 @@ function obtenerTablasClubes(valores, clubesInput) {
       var encabezados = valores[0]; // Encabezados de la tabla
       //Menos 3 para quitar los puntos
       var registro = fila.slice(0, encabezados.length-3);
+
       //Añadimos los puntos correspondientes al dia
       registro.push(fila[aux]);
       //registro.push(fechas);
 
       //Logger.log(clubesFila);//Imprime en los logs por si os es de utilidad
+
 
       clubesFila.forEach(club => {
         var clubEnClubInput = clubesInput.find(inputClub => inputClub.toLowerCase() === club.toLowerCase()); // Buscar el club con la misma grafía en clubesInput
@@ -416,7 +444,7 @@ function formatearTablasClubes(tablasClubes, email_input) {
     // Registros en una sola columna con separación
     for (var n = 0; n < registrosClub.length; n++) {
       var registroNombre = registrosClub[n][2];
-      var registroPts = registrosClub[n][3];
+      var registroPts = registrosClub[n][16];
 
       var registroParaResaltar = registrosClub[n];
       var resaltar = false;
