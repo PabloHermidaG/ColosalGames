@@ -87,7 +87,7 @@
   border-collapse: collapse;
   width: 100%;
   /*table-layout: fixed;*/
-  margin-bottom: 10px;
+  margin-bottom: 10%;
 }
 .tabla-club th {
   font-weight: bold; /* Estilo prominente para el título de la tabla */
@@ -103,6 +103,7 @@
   padding: 5px;
   background-color: #f2f2f2; /* Color de fondo gris claro */
   text-align: left;
+  margin-bottom: 5%;
 }
 
 .captionTitle{
@@ -147,7 +148,7 @@
 }
 
 body{
-  margin: 25px;
+  margin: 18;
 }
 
 #answerBox{
