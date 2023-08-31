@@ -15,6 +15,7 @@
   #personal td:nth-child(3) {
     width: 16%;
     text-align: center;
+    /*white-space: nowrap;*/
   }
 
   #personal th:nth-child(1) {
@@ -25,8 +26,6 @@
   #personal th:nth-child(2) {
     width: 54%;
     text-align: left;
-    border-right: white 1px solid;
-    border-left: white 1px solid;
   }
 
   #personal th:nth-child(3) {
@@ -164,7 +163,6 @@ body{
    td:nth-child(2) {
     width: 16%;
     text-align: center;
-    border-left: white 1px solid;
   }
 
    th:nth-child(1) {
@@ -175,7 +173,6 @@ body{
    th:nth-child(2) {
     width: 16%;
     text-align: center;
-    border-left: white 1px solid;
   }
 
   #byebye{
@@ -187,4 +184,8 @@ body{
     width: 80%;
     margin: auto;
     display: block;
+  }
+
+  #result .tabla-club {
+    border: 0;
   }
