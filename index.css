@@ -164,6 +164,7 @@ body{
    td:nth-child(2) {
     width: 16%;
     text-align: center;
+    border-left: white 1px solid;
   }
 
    th:nth-child(1) {
@@ -178,5 +179,11 @@ body{
   }
 
   #byebye{
-    margin-bottom: 25px !important;
+    height: 50px;
+  }
+
+  .logo img{
+    width: 80%;
+    margin: auto;
+    display: block;
   }

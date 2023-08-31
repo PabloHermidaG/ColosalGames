@@ -64,6 +64,7 @@ window.addEventListener('load', async function() {
 
     document.getElementById("boton").innerHTML = mensajesAUtilizar[0];
     document.getElementById("instructions").innerHTML = mensajesAUtilizar[1];
+    document.getElementById("title").innerHTML = mensajesAUtilizar[2];
 
     document.getElementById("form").style.display = "flex";
     
@@ -81,6 +82,7 @@ window.addEventListener('load', async function() {
         document.getElementById('result').innerHTML = "";
         document.getElementById('personal').innerHTML = "";
         document.getElementById('clubResults').innerHTML = '';
+        document.getElementById("byebye").innerHTML = "";
     });
 
     document.getElementById("submitButton").addEventListener("click", async function(){
@@ -90,7 +92,7 @@ window.addEventListener('load', async function() {
 });
 
 async function obtenerMensajes(){
-  let aux = [datosTitulo[4][1],datosTitulo[5][1]]
+  let aux = [datosTitulo[4][1],datosTitulo[5][1],datosTitulo[9][1]];
 
   return aux;
 }
