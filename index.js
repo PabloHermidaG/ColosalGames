@@ -77,6 +77,7 @@ window.addEventListener('load', async function() {
     let boton = document.getElementById("boton");
     boton.addEventListener("click", function(){
         document.getElementById('form').style.display = 'flex';
+        document.getElementById('title').style.display = 'block';
         instructions.style.display = 'block';
         botonReset.style.display = 'none';
         document.getElementById('result').innerHTML = "";
@@ -524,6 +525,7 @@ function mostrarResultado(resultado)
     document.getElementById('personal').innerHTML = resultado.personal; 
     document.getElementById('clubResults').innerHTML = Object.values(resultado.clubes).join('');
     document.getElementById('form').style.display = 'none';
+    document.getElementById('title').style.display = 'none';
     instructions.style.display = 'none';
     botonReset.style.display = 'block';
     document.getElementById('byebye').innerHTML = resultado.byebye;
