@@ -121,7 +121,7 @@ async function extraerInformacion(email_input) {
       datosGrupos = convertData(rep);
     })
 
-  mensajes = [datosTitulo[4][1],datosTitulo[5][1],datosTitulo[6][1],datosTitulo[7][1]]
+  mensajes = [datosTitulo[4][1],datosTitulo[5][1],datosTitulo[6][1],datosTitulo[7][1], datosTitulo[8][1]]
   //email_input = "lfhg0001@gmail.com"; //Utilizar para hacer pruebas de ejecucion en el logger
 
   email_input = email_input.toUpperCase();
@@ -159,7 +159,8 @@ async function extraerInformacion(email_input) {
   var resultado = {
     resena: resenaHTML,
     personal: personalHTML,
-    clubes: tablasHTMLClubes
+    clubes: tablasHTMLClubes,
+    byebye: mensajes[4],
   };
 
   return resultado;
@@ -172,13 +173,9 @@ async function extraerInformacion(email_input) {
 
 function formatearTablaPersonal(valores){
 
-  console.log(valores);
-
   var outputHtml = "<table class='tabla-club'><tr>";
 
   var fechas = datosPersonal[0].slice(1);
-
-  console.log(fechas);
   
   // Agregar los títulos de las columnas (primer elemento del array)
   var titles = datosPersonal[18].slice(1,4); // Excluir el primer elemento
@@ -527,6 +524,7 @@ function mostrarResultado(resultado)
     document.getElementById('form').style.display = 'none';
     instructions.style.display = 'none';
     botonReset.style.display = 'block';
+    document.getElementById('byebye').innerHTML = resultado.byebye;
     }else{
       document.getElementById('result').innerHTML = resultado;
       document.getElementById('clubResults').innerHTML = '';
