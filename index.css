@@ -87,7 +87,8 @@
   border-collapse: collapse;
   width: 100%;
   /*table-layout: fixed;*/
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+  border: 2px black solid;
 }
 .tabla-club th {
   font-weight: bold; /* Estilo prominente para el título de la tabla */
@@ -174,4 +175,8 @@ body{
     width: 16%;
     text-align: center;
     border-left: white 1px solid;
+  }
+
+  #byebye{
+    margin-bottom: 25px !important;
   }
