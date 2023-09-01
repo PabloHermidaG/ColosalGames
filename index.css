@@ -198,3 +198,8 @@ body{
   .first {
     padding-bottom: 6% !important;
 }
+
+#frasefinal{
+  /*Cursiva*/
+  font-style: italic;
+}

@@ -304,7 +304,7 @@ function formatearTablaResena(registro) {
     tablaHTML += '</tr>';
 
     tablaHTML += '<tr>';
-    tablaHTML += '<td class="sub">' + fraseFinal + '</td>';
+    tablaHTML += '<td class="sub" id="frasefinal">' + fraseFinal + '</td>';
     tablaHTML += '</tr>';
     
     /*
