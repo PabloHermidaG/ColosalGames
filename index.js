@@ -272,6 +272,9 @@ function formatearTablaResena(registro) {
   var estrellas = registro[1][2];
   var comentario = registro[1][3];
   var disfrute = registro[1][4];
+
+  var verificado = registro[1][5];
+  var fraseFinal = registro[1][6];
   //var frase = registro[1][5];
 
   var tablaHTML = '<table class="tabla-club">';
@@ -294,6 +297,14 @@ function formatearTablaResena(registro) {
     
     tablaHTML += '<tr>';
     tablaHTML += '<td class="sub">' + disfrute + '</td>';
+    tablaHTML += '</tr>';
+
+    tablaHTML += '<tr>';
+    tablaHTML += '<td class="verificado">' + verificado + '</td>';
+    tablaHTML += '</tr>';
+
+    tablaHTML += '<tr>';
+    tablaHTML += '<td class="sub">' + fraseFinal + '</td>';
     tablaHTML += '</tr>';
     
     /*
