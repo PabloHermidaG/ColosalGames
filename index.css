@@ -51,6 +51,7 @@
 
 .social-icons {
     margin-top: 20px;
+    text-align: center;
 }
 
 .social-icons a {
@@ -132,6 +133,7 @@
   .dropdown{
     margin-bottom: 1%;
     border: 0px;
+    font-size: larger;
   }
 
   #personal th:nth-child(1) {
