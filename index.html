@@ -1,6 +1,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
     <title>colosalgames</title>
     <link rel="icon" href="img/logo.png" type="image/x-icon">
@@ -8,8 +10,85 @@
   <body>
     <link rel="stylesheet" href="index.css">
     <script type="module" src="index.js"></script>
-    <div id="recuadro">
-        <div class="logo"> <img src="img/logo_cabecera.png"> </div>
+
+    <div class="logo"> <img src="img/logo_cabecera.png"> </div>
+
+    <!-- Dropdown con 4 opciones: inicio, resultados, quienes somos y contacto -->
+    <select class="dropdown" id="menu">
+      <option value="inicio">Inicio</option>
+      <option value="recuadro">Resultados</option>
+      <option value="quienes">Quiénes Somos</option>
+      <option value="contacto">Contacto</option>
+    </select>
+
+    
+    <!--<div class="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#quienes-somos">Quiénes Somos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>-->
+
+    <!-- Line horizontal -->
+    <div class="line"></div>
+
+    <div id="inicio" class="opcionesMenu">
+      <div class="textoInicio">
+
+        <p class="title">¡Bienvenidos a COLOSAL Games, el hogar de un grupo de chiflados apasionados de los juegos!</p> 
+
+        Somos un equipo de locuelos que se dedica a hacer jugar a muuuucha gente. 
+        Sí, mucha gente a la vez. 
+        
+        <p class="nc">¿Cómo empezamos?</p>
+
+        Pues en medio del caos del confinamiento del covid, 
+        decidimos convertirnos en el entretenimiento favorito de decenas de familiares y amigos. 
+        Pero eso no fue suficiente para nuestros apetitos desenfrenados de diversión, 
+        así que incorporamos a nuestras historias vídeos muy, pero que  muy locos, para hacer reír a centenares de personas. 
+
+        <p>Y ahora, nos lanzamos a las redes sociales y a la web para llevar nuestros juegos masivos a miles de participantes. 
+          Y es que claro, el desafío final no podía ser otro que <span class="nc">hacer jugar a millones de personas juntas.</span> </p>
+
+        <p>¿Estás listo para unirte a la diversión masiva?</p>
+          
+        Prepárate para la experiencia COLOSAL, 
+        donde <span class="nc">la diversión alcanza proporciones épicas.</span>
+      </div>
+    </div>
+
+    <div id="quienes" class="opcionesMenu">
+      
+      <p class="title" id="quienessomos">¿Quiénes somos?</p>
+
+      <p>Nuestra increíble Junta Directiva lidera este circo de risas y entretenimiento: </p>
+
+      <span class="title" id="color1">Alfonso de Rueda</span> (Receptor de Jamones), la mente pensante que mantiene los engranajes funcionando.
+      
+      <p><span class="title" id="color2">Pablo Hermida</span> (Artista tecnológico digital), el mago del código que ha llevado nuestra web al siglo XXI.</p>
+
+      <span class="title" id="color3">Aïda Márquez</span> (Musa del Juego Masivo), la cara, la sonrisa, las ganas y la creatividad, ¡todo en una!
+      
+      <p><span class="title" id="color4">Dàlia Crespo</span> (Mensajera de Luz) la mano en la sombra, que habla mucho, hace poco y se divierte con colorinchis.</p>
+
+      <span class="title" id="color4">Paco Gómez</span> (FEO, Fun Executive Officer). El alma mater de todo este tinglado. Le echa más ganas que nadie... ¡y siempre tiene razón!
+      
+      <p class="itl">¡Estamos locos, pero también contamos con colaboradores en juegos concretos!</p>
+    </div>
+
+    <div id="contacto" class="opcionesMenu">
+      <p class="title" id="contactotext">Contacto</p>
+        <div class="social-icons">
+            <a href="https://t.me/COLOSALGames" target="_blank" class="telegram-icon"><img src="img/telegram-icon.png" alt="Telegram"></a>
+            <a href="https://www.instagram.com/colosalgames/" target="_blank" class="instagram-icon"><img src="img/instagram-icon.png" alt="Instagram"></a>
+            <a href="https://twitter.com/colosalgames" target="_blank" class="twitter-icon"><img src="img/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://www.youtube.com/user/" target="_blank" class="youtube-icon"><img src="img/youtube-icon.png" alt="YouTube"></a>
+        </div>
+    </div>
+
+    <div id="recuadro" class="opcionesMenu">
 
         <h1 class="title" id="title"></h1>
 
@@ -32,5 +111,3 @@
     </div>
   </body>
 </html>
-  
-  

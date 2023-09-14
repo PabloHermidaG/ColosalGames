@@ -54,6 +54,29 @@ function convertData(datos) {
 
 window.addEventListener('load', async function() {
 
+  let select = document.getElementById("menu");
+
+  select.addEventListener("click", function(){
+
+    // Como es un select lo que hacemos es obtener todos sus valores y poner todos los elementos que
+    // sean igual a esos valores como display none y el que sea igual a ese valor como display block
+    
+    let options = select.options;
+    let selected = select.selectedIndex;
+    let value = options[selected].value;
+
+    let divs = document.getElementsByClassName("opcionesMenu");
+
+    for(let i = 0; i < divs.length; i++){
+      if(divs[i].id == value){
+        divs[i].style.display = "block";
+      }else{
+        divs[i].style.display = "none";
+      }
+    }
+
+  });
+
   await fetch(TITLE_URL)
   .then(res => res.text())
   .then(rep => {
