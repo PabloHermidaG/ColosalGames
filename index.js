@@ -56,7 +56,7 @@ window.addEventListener('load', async function() {
 
   let select = document.getElementById("menu");
 
-  select.addEventListener("click", function(){
+  select.addEventListener("change", function(){
 
     // Como es un select lo que hacemos es obtener todos sus valores y poner todos los elementos que
     // sean igual a esos valores como display none y el que sea igual a ese valor como display block
