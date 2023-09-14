@@ -56,6 +56,26 @@ window.addEventListener('load', async function() {
 
   let select = document.getElementById("menu");
 
+  //Comprobamos que en la url no se ha pasado ningun parametro
+  //En caso de haber pasado un parametro lo utilizamos para mostrar el div correspondiente
+  if(window.location.search != ""){
+    let url = window.location.search;
+    let aux = url.split("?");
+    let value = aux[1];
+
+    let divs = document.getElementsByClassName("opcionesMenu");
+
+    for(let i = 0; i < divs.length; i++){
+      if(divs[i].id == value){
+        divs[i].style.display = "block";
+
+        select.value = value;
+      }else{
+        divs[i].style.display = "none";
+      } 
+    }
+  }
+
   select.addEventListener("change", function(){
 
     // Como es un select lo que hacemos es obtener todos sus valores y poner todos los elementos que
