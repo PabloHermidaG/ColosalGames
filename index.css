@@ -24,7 +24,7 @@
     /*white-space: nowrap;*/
   }
 
-  #recuadro{
+  #resultados{
     display: none;
   }
 
@@ -213,7 +213,7 @@
     margin-bottom: 10px;
   }
   /* Estilos del recuadro */
-  #recuadro {
+  #resultados {
     border-radius: 0px;
     padding: 0px;
     padding-bottom: 0;
@@ -340,6 +340,7 @@ body{
     width: 80%;
     margin: auto;
     display: block;
+    /*max-width: 300px;*/
   }
 
   #result .tabla-club {
