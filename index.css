@@ -24,6 +24,10 @@
     /*white-space: nowrap;*/
   }
 
+  #actual{
+    display: none;
+  }
+
   #resultados{
     display: none;
   }
