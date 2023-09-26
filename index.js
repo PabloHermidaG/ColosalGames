@@ -221,7 +221,7 @@ function formatearTablaPersonal(valores){
 
   var outputHtml = "<table class='tabla-club'><tr>";
 
-  console.log(datosPersonal);
+  //console.log(datosPersonal);
 
   var fechas = datosPersonal[0].slice(1);
   
