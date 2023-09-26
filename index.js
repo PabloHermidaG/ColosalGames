@@ -221,10 +221,12 @@ function formatearTablaPersonal(valores){
 
   var outputHtml = "<table class='tabla-club'><tr>";
 
+  console.log(datosPersonal);
+
   var fechas = datosPersonal[0].slice(1);
   
   // Agregar los títulos de las columnas (primer elemento del array)
-  var titles = datosPersonal[18].slice(1,4); // Excluir el primer elemento
+  var titles = datosPersonal[1].slice(1,4); // Excluir el primer elemento
   for (var i = 0; i < titles.length; i++) {
     if(titles[i] != ""){
       outputHtml += "<th>" + titles[i] + "</th>";
