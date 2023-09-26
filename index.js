@@ -309,7 +309,6 @@ function esFechaPasada(fecha){
   } 
 }
 
-
 function formatearTablaResena(registro) {
   //No hace falta que utilicemos 
 
@@ -426,23 +425,8 @@ function obtenerClubesInput(registro, email_input) {
 
 function obtenerTablasClubes(valores, clubesInput) {
   var tablasClubes = {};
-
-  let fechaViernes = convertirNumeroASFecha(valores[0][3]);
-  let fechaSabado = convertirNumeroASFecha(valores[0][4]);
-  let fechaDomingo = convertirNumeroASFecha(valores[0][5]);
-
-  let fechas = [fechaViernes,fechaSabado,fechaDomingo];
-
-  let aux = 0;
-
-  for(let i = 0; i < fechas.length; i++){
-    if(esFechaPasada(fechas[i])){
-      aux = i;
-    }
-  }
-
-  //Para que coincida con la columna a los puntos correspondientes le sumamos 3
-  aux += 3;
+  
+  let aux = 5;
 
   for (var j = 0; j < valores.length; j++) {
     var fila = valores[j];
