@@ -303,7 +303,7 @@ function formatearTablaPersonal(valores){
   
   outputHtml += "</table>";
 
-  outputHtml += "<p class='explicacion'>* Entre paréntesis las respuestas perfectas y la puntuación máxima que han conseguido</p>";
+  outputHtml += "<p class='explicacion'>* Entre paréntesis, las respuestas perfectas y la puntuación máxima que han conseguido</p>";
   
   return outputHtml;
 }
