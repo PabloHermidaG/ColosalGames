@@ -13,15 +13,31 @@
   text-align: left;
   }
 
+  #personal .tabla-club th {
+    font-size: x-small !important;
+  }
+
+  #personal .tabla-club td {
+    font-size: x-small !important;
+  }
+
+  #personal .tabla-club th {
+    background-color: gray;
+  }
+
   #personal td:nth-child(2) {
     width: 54%;
     text-align: left;
   }
 
+  #aventura{
+    font-size: 119%;
+  }
+
   #personal td:nth-child(3) {
     width: 16%;
     text-align: center;
-    /*white-space: nowrap;*/
+    /*white-space: pre;*/
   }
 
   #actual{
@@ -189,9 +205,24 @@
     font-size: small;
     font-family: 'Personalizada';
   }
-  .estrellas{
-    color: #ed6e3d;
+  .estrellasnaranjas{
+    color: #ead003;
   }
+
+  .explicacion{
+    font-size: x-small;
+    color: gray;
+    font-style: italic;
+  }
+
+  .estrellasrojas{
+    color: #e43433;
+  }
+
+  .estrellasverdes{
+    color: #439844;
+  }
+
   table {
     border-collapse: collapse;
     width: 100%;
@@ -247,7 +278,7 @@
   padding: 8px;
   /* background-color: #f2f2f2; Color de fondo gris claro */
   color: white;
-  background-color: black;
+  background-color: #685ba4;
   text-align: left;
 }
 
@@ -283,9 +314,9 @@
   border-radius: 5px;
 }
 .resaltado{
-  color: #ffffff;
+  color: white;
   font-weight: bold;
-  background-color: #685ba4;
+  background-color:#685ba48c;
   padding: 5px;
   border-radius: 5px;
 }

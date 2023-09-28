@@ -97,6 +97,49 @@ window.addEventListener('load', async function() {
 
   });
 
+  let select2 = document.getElementById("menu2");
+
+  //Comprobamos que en la url no se ha pasado ningun parametro
+  //En caso de haber pasado un parametro lo utilizamos para mostrar el div correspondiente
+  if(window.location.search != ""){
+    let url = window.location.search;
+    let aux = url.split("?");
+    let value = aux[1];
+
+    let divs = document.getElementsByClassName("opcionesMenu");
+
+    for(let i = 0; i < divs.length; i++){
+      if(divs[i].id == value){
+        divs[i].style.display = "block";
+
+        select.value = value;
+      }else{
+        divs[i].style.display = "none";
+      } 
+    }
+  }
+
+  select2.addEventListener("change", function(){
+
+    // Como es un select lo que hacemos es obtener todos sus valores y poner todos los elementos que
+    // sean igual a esos valores como display none y el que sea igual a ese valor como display block
+    
+    let options = select.options;
+    let selected = select.selectedIndex;
+    let value = options[selected].value;
+
+    let divs = document.getElementsByClassName("opcionesMenu2");
+
+    for(let i = 0; i < divs.length; i++){
+      if(divs[i].id == value){
+        divs[i].style.display = "block";
+      }else{
+        divs[i].style.display = "none";
+      }
+    }
+
+  });
+
   await fetch(TITLE_URL)
   .then(res => res.text())
   .then(rep => {
@@ -259,6 +302,8 @@ function formatearTablaPersonal(valores){
   }
   
   outputHtml += "</table>";
+
+  outputHtml += "<p class='explicacion'>* Entre paréntesis las respuestas perfectas y la puntuación máxima que han conseguido</p>";
   
   return outputHtml;
 }
@@ -309,7 +354,6 @@ function esFechaPasada(fecha){
   } 
 }
 
-
 function formatearTablaResena(registro) {
   //No hace falta que utilicemos 
 
@@ -337,7 +381,19 @@ function formatearTablaResena(registro) {
     tablaHTML += '</tr>';
     
     tablaHTML += '<tr>';
-    tablaHTML += '<td class="p0"><span class="estrellas">' + estrellas + ' </span><b>' + comentario+ '</b></td>';
+
+    console.log(estrellas.toString());
+
+    // Si son menos de 3 estrellas, se muestran las estrellas en rojo. Si son 3 o más, se muestran en verde y si son 3 en narajja.
+    if (estrellas.toString().includes("★★☆☆☆") || estrellas.toString().includes("★☆☆☆☆")) {
+      tablaHTML += '<td class="p0"><span class="estrellasrojas">' + estrellas + ' </span><b>' + comentario+ '</b></td>';
+    }else if(estrellas.toString().includes("★★★☆☆")){
+      tablaHTML += '<td class="p0"><span class="estrellasnaranjas">' + estrellas + ' </span><b>' + comentario+ '</b></td>';
+    }else{
+      tablaHTML += '<td class="p0"><span class="estrellasverdes">' + estrellas + ' </span><b>' + comentario+ '</b></td>';
+    }
+
+    
     tablaHTML += '</tr>';
     
     tablaHTML += '<tr>';
@@ -426,23 +482,8 @@ function obtenerClubesInput(registro, email_input) {
 
 function obtenerTablasClubes(valores, clubesInput) {
   var tablasClubes = {};
-
-  let fechaViernes = convertirNumeroASFecha(valores[0][3]);
-  let fechaSabado = convertirNumeroASFecha(valores[0][4]);
-  let fechaDomingo = convertirNumeroASFecha(valores[0][5]);
-
-  let fechas = [fechaViernes,fechaSabado,fechaDomingo];
-
-  let aux = 0;
-
-  for(let i = 0; i < fechas.length; i++){
-    if(esFechaPasada(fechas[i])){
-      aux = i;
-    }
-  }
-
-  //Para que coincida con la columna a los puntos correspondientes le sumamos 3
-  aux += 3;
+  
+  let aux = 5;
 
   for (var j = 0; j < valores.length; j++) {
     var fila = valores[j];
