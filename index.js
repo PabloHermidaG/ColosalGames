@@ -265,7 +265,7 @@ function formatearTablaPersonal(valores){
   var outputHtml = "<table class='tabla-club'><tr>";
 
   //console.log(datosPersonal);
-
+ 
   var fechas = datosPersonal[0].slice(1);
   
   // Agregar los títulos de las columnas (primer elemento del array)
