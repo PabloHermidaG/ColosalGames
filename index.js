@@ -342,9 +342,13 @@ function obtenerTituloResena(){
 }
 
 function esFechaPasada(fecha){
-  fecha = new Date(fecha);
+  fecha = new Date(fecha).toLocaleString('en-GB', {
+  hour12: false,
+});
 
-  let fechaActual = new Date();
+  let fechaActual = new Date().toLocaleString('en-GB', {
+  hour12: false,
+});
 
  // Comparar las fechas
   if (fecha < fechaActual) {
