@@ -282,9 +282,27 @@ function formatearTablaPersonal(valores){
 
   for (var j = 0; j < dataRow.length; j += 3) {
 
-    fechas[j] = new Date(fechas[j]);
+      // Dividir la cadena de fecha y hora
+  let [fechaParte, horaParte] = fechas[j].split(" ");
 
-    if(esFechaPasada(fechas[j])){
+  // Dividir la fecha en día, mes y año
+  let [dia, mes, anio] = fechaParte.split("/");
+
+  // Dividir la hora en horas, minutos y segundos
+  let [hora, minutos, segundos] = horaParte.split(":");
+
+  // Convertir las partes de la fecha a números enteros
+  dia = parseInt(dia);
+  mes = parseInt(mes) - 1; // Restar 1 al mes, ya que los meses en JavaScript empiezan en 0
+  anio = parseInt(anio);
+  hora = parseInt(hora);
+  minutos = parseInt(minutos);
+  segundos = parseInt(segundos);
+
+  // Crear la fecha formateada
+  let fechaFormateada = new Date(anio, mes, dia, hora, minutos, segundos);
+
+    if(esFechaPasada(fechaFormateada)){
       if(j > dataRow.length-4){
         outputHtml += "<tr class='bold'>";
       }else{
@@ -332,18 +350,41 @@ function obtenerRegistro(datos, email_input) {
 
 function obtenerTituloResena(){
   //Si esta fecha es pasado, se muestra el título de A2. Si es presente o futuro, se muestra el de A3.
-  let aux = esFechaPasada(datosTitulo[0][0]);
+  let fecha = datosTitulo[0][0];
+
+  // Dividir la cadena de fecha y hora
+  let [fechaParte, horaParte] = fecha.split(" ");
+
+  // Dividir la fecha en día, mes y año
+  let [dia, mes, anio] = fechaParte.split("/");
+
+  // Dividir la hora en horas, minutos y segundos
+  let [hora, minutos, segundos] = horaParte.split(":");
+
+  // Convertir las partes de la fecha a números enteros
+  dia = parseInt(dia);
+  mes = parseInt(mes) - 1; // Restar 1 al mes, ya que los meses en JavaScript empiezan en 0
+  anio = parseInt(anio);
+  hora = parseInt(hora);
+  minutos = parseInt(minutos);
+  segundos = parseInt(segundos);
+
+  // Crear la fecha formateada
+  let fechaFormateada = new Date(anio, mes, dia, hora, minutos, segundos);
+
+  // Ponemos el mes -1 porque en javascript los meses empiezan en 0
+  let aux = esFechaPasada(fechaFormateada);
 
   if (aux) {
-    return datosTitulo[1][0];
-  } else {
     return datosTitulo[2][0];
+  } else {
+    return datosTitulo[1][0];
   }
 }
 
 function esFechaPasada(fecha){
   fecha = new Date(fecha);
-
+  
   let fechaActual = new Date();
 
  // Comparar las fechas
@@ -372,7 +413,31 @@ function formatearTablaResena(registro) {
 
   tablaHTML += '<caption class="captionTitle">'+titulo+'</caption>';
 
-  let aux = esFechaPasada(datosResena[0][0])
+  let fecha = datosResena[0][0];
+
+  // Dividir la cadena de fecha y hora
+  let [fechaParte, horaParte] = fecha.split(" ");
+
+  // Dividir la fecha en día, mes y año
+  let [dia, mes, anio] = fechaParte.split("/");
+
+  // Dividir la hora en horas, minutos y segundos
+  let [hora, minutos, segundos] = horaParte.split(":");
+
+  // Convertir las partes de la fecha a números enteros
+  dia = parseInt(dia);
+  mes = parseInt(mes) - 1; // Restar 1 al mes, ya que los meses en JavaScript empiezan en 0
+  anio = parseInt(anio);
+  hora = parseInt(hora);
+  minutos = parseInt(minutos);
+  segundos = parseInt(segundos);
+
+  // Crear la fecha formateada
+  let fechaFormateada = new Date(anio, mes, dia, hora, minutos, segundos);
+
+  console.log(fechaFormateada);
+
+  let aux = esFechaPasada(fechaFormateada);
   
   //Si es fecha futura no mostramos la reseña
   if(aux){
@@ -381,8 +446,6 @@ function formatearTablaResena(registro) {
     tablaHTML += '</tr>';
     
     tablaHTML += '<tr>';
-
-    console.log(estrellas.toString());
 
     // Si son menos de 3 estrellas, se muestran las estrellas en rojo. Si son 3 o más, se muestran en verde y si son 3 en narajja.
     if (estrellas.toString().includes("★★☆☆☆") || estrellas.toString().includes("★☆☆☆☆")) {
