@@ -29,6 +29,7 @@ let mensajesAUtilizar = "";
 
 let instructions;
 let botonReset;
+let policy;
 
 function convertData(datos) {
   let aux = [];
@@ -151,12 +152,14 @@ window.addEventListener('load', async function() {
     document.getElementById("boton").innerHTML = mensajesAUtilizar[0];
     document.getElementById("instructions").innerHTML = mensajesAUtilizar[1];
     document.getElementById("title").innerHTML = mensajesAUtilizar[2];
+    document.getElementById("policy").innerText = mensajesAUtilizar[3];
 
     document.getElementById("form").style.display = "flex";
     
 
     instructions = document.getElementById('instructions');
     botonReset = document.getElementById('botonReset');
+    policy = document.getElementById('policy');
     var cuadroDeTexto = document.getElementById('answerBox');
     cuadroDeTexto.focus();
 
@@ -166,6 +169,7 @@ window.addEventListener('load', async function() {
         document.getElementById('title').style.display = 'block';
         instructions.style.display = 'block';
         botonReset.style.display = 'none';
+        policy.style.display = 'block';
         document.getElementById('result').innerHTML = "";
         document.getElementById('personal').innerHTML = "";
         document.getElementById('clubResults').innerHTML = '';
@@ -179,7 +183,7 @@ window.addEventListener('load', async function() {
 });
 
 async function obtenerMensajes(){
-  let aux = [datosTitulo[4][1],datosTitulo[5][1],datosTitulo[9][1]];
+  let aux = [datosTitulo[4][1],datosTitulo[5][1],datosTitulo[9][1],datosTitulo[10][1]];
 
   return aux;
 }
@@ -435,8 +439,6 @@ function formatearTablaResena(registro) {
   // Crear la fecha formateada
   let fechaFormateada = new Date(anio, mes, dia, hora, minutos, segundos);
 
-  console.log(fechaFormateada);
-
   let aux = esFechaPasada(fechaFormateada);
   
   //Si es fecha futura no mostramos la reseña
@@ -688,6 +690,7 @@ function mostrarResultado(resultado)
     document.getElementById('title').style.display = 'none';
     instructions.style.display = 'none';
     botonReset.style.display = 'block';
+    policy.style.display = 'none';
     document.getElementById('byebye').innerHTML = resultado.byebye;
     }else{
       document.getElementById('result').innerHTML = resultado;

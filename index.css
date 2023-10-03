@@ -191,6 +191,15 @@
       color: white;
   }
 
+  #policy{
+    font-size: x-small;
+    font-style: italic;
+    padding: 5%;
+    border: 2px solid #685ba4;
+    background-color: lightgray;
+    border-radius: 2%;
+  }
+
   #personal th:nth-child(2) {
     width: 54%;
     text-align: left;
