@@ -192,11 +192,8 @@
   }
 
   #policy{
-    font-size: x-small;
+    font-size: xx-small;
     font-style: italic;
-    padding: 5%;
-    border: 2px solid #685ba4;
-    background-color: lightgray;
     border-radius: 2%;
   }
 
