@@ -214,7 +214,8 @@ async function extraerInformacion(email_input) {
       datosGrupos = convertData(rep);
     })
 
-  mensajes = [datosTitulo[4][1],datosTitulo[5][1],datosTitulo[6][1],datosTitulo[7][1], datosTitulo[8][1]]
+  mensajes = [datosTitulo[4][1],datosTitulo[5][1],datosTitulo[6][1],datosTitulo[7][1], datosTitulo[8][1], datosTitulo[11][1]];
+
   //email_input = "lfhg0001@gmail.com"; //Utilizar para hacer pruebas de ejecucion en el logger
 
   email_input = email_input.toUpperCase();
@@ -325,7 +326,7 @@ function formatearTablaPersonal(valores){
   
   outputHtml += "</table>";
 
-  outputHtml += "<p class='explicacion'>* Entre paréntesis, las respuestas perfectas y la puntuación máxima que han conseguido</p>";
+  outputHtml += "<p class='explicacion'>"+ mensajes[5] +"</p>";
   
   return outputHtml;
 }
