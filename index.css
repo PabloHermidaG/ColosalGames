@@ -195,6 +195,7 @@
     font-size: xx-small;
     font-style: italic;
     border-radius: 2%;
+    color: lightgray;
   }
 
   #personal th:nth-child(2) {
