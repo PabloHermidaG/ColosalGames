@@ -496,7 +496,7 @@ function convertirNumeroASFecha(numero) {
 function obtenerClubesInput(registro, email_input) {
   let aux = false;
 
-  for(var i = 2; i < registro.length; i++){
+  for(var i = 1; i < registro.length; i++){
     if(email_input == registro[i][0].toUpperCase()){
       aux = registro[i];
     }
