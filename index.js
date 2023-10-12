@@ -125,8 +125,8 @@ window.addEventListener('load', async function() {
     // Como es un select lo que hacemos es obtener todos sus valores y poner todos los elementos que
     // sean igual a esos valores como display none y el que sea igual a ese valor como display block
     
-    let options = select.options;
-    let selected = select.selectedIndex;
+    let options = select2.options;
+    let selected = select2.selectedIndex;
     let value = options[selected].value;
 
     let divs = document.getElementsByClassName("opcionesMenu2");
