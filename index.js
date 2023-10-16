@@ -141,6 +141,20 @@ window.addEventListener('load', async function() {
 
   });
 
+  let options = select2.options;
+  let selected = select2.selectedIndex;
+  let value = options[selected].value;
+
+  let divs = document.getElementsByClassName("opcionesMenu2");
+
+  for(let i = 0; i < divs.length; i++){
+    if(divs[i].id == value){
+      divs[i].style.display = "block";
+    }else{
+      divs[i].style.display = "none";
+    }
+  }
+
   await fetch(TITLE_URL)
   .then(res => res.text())
   .then(rep => {
