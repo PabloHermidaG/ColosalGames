@@ -25,6 +25,10 @@
     background-color: gray;
   }
 
+  .lt-small{
+    font-size: x-small;
+  }
+
   #personal td:nth-child(2) {
     width: 54%;
     text-align: left;
@@ -186,6 +190,10 @@
       font-size: small;
   }
 
+  #como{
+    display: none;
+  }
+
   .menu li a:hover {
       background-color: #555; /* Color de fondo al pasar el mouse sobre las opciones */
       color: white;
@@ -195,7 +203,7 @@
     font-size: xx-small;
     font-style: italic;
     border-radius: 2%;
-    color: lightgray;
+    color: gray;
   }
 
   #personal th:nth-child(2) {
