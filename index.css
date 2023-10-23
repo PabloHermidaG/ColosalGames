@@ -25,6 +25,10 @@
     background-color: gray;
   }
 
+  .lt-small{
+    font-size: x-small;
+  }
+
   #personal td:nth-child(2) {
     width: 54%;
     text-align: left;
