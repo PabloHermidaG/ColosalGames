@@ -43,7 +43,8 @@
   }
 
   .grid p{
-    font-size: xx-small;
+    font-size: x-small;
+    margin-top: 0;
   }
 
   .lt-small{
