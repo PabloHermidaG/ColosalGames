@@ -25,9 +25,37 @@
     background-color: gray;
   }
 
+  .banner{
+    position: absolute;
+    right: 0%;
+    top: 11%;
+    width: 127px
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 7px;
+  }
+
+  .grid img{
+    width: 160px;
+  }
+
+  .grid p{
+    font-size: xx-small;
+  }
+
   .lt-small{
     font-size: x-small;
   }
+
+@media screen and (max-width: 480px) {
+    /* Ajustar el tamaño para pantallas más pequeñas, como teléfonos móviles */
+    .banner {
+        width: 65px;
+    }
+}
 
   #personal td:nth-child(2) {
     width: 54%;
@@ -348,8 +376,13 @@
   font-weight: bold;
 }
 
-body{
+.body{
   margin: 18;
+  display: block;
+}
+
+body{
+  margin: 0;
 }
 
 #answerBox{
