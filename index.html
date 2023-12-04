@@ -17,195 +17,254 @@
     <title>colosalgames</title>
     <link rel="icon" href="img/logo.png" type="image/x-icon">
   </head>
+
+
+
   <body>
     <link rel="stylesheet" href="index.css">
     <script type="module" src="index.js"></script>
 
-    <div class="logo"> <img src="img/logo_cabecera.png"> </div>
+    <span class="body">
+      <div class="logo"> <img src="img/logo_cabecera.png"> </div>
 
-    <!-- Dropdown con 4 opciones: inicio, resultados, quienes somos y contacto -->
-    <select class="dropdown" id="menu">
-      <option value="inicio">Inicio</option>
-      <option value="como">¿CÓMO SE JUEGA?</option>
-      <option value="actual">Partida actual</option>
-      <option value="resultados">Resultados</option>
-      <option value="contacto">Contacto</option>
-    </select>
+      <!-- Dropdown con 4 opciones: inicio, resultados, quienes somos y contacto -->
+      <select class="dropdown" id="menu">
+        <option value="inicio">Inicio</option>
+        <option value="como">¿CÓMO SE JUEGA?</option>
+        <option value="actual">Partida actual</option>
+        <option value="resultados">Resultados</option>
+        <option value="contacto">Contacto</option>
+      </select>
+      
+      <!--<div class="menu">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#quienes-somos">Quiénes Somos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>-->
 
-    
-    <!--<div class="menu">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#resultados">Resultados</a></li>
-        <li><a href="#quienes-somos">Quiénes Somos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>-->
+      <!-- Line horizontal -->
+      <div class="line"></div>
 
-    <!-- Line horizontal -->
-    <div class="line"></div>
+      <div id="inicio" class="opcionesMenu">
+        <a href="https://colosalgames.com/?actual"><img src="img/BANNER_HOME.png" class="banner"></a>
 
-    <div id="inicio" class="opcionesMenu">
-      <div class="textoInicio">
+        <div class="textoInicio">
 
-        <p class="title">¡Bienvenidos a COLOSAL Games, el hogar de un grupo de chiflados apasionados de los juegos!</p> 
+          <p class="title">¡Bienvenidos a COLOSAL Games, el hogar de un grupo de chiflados apasionados de los juegos!</p> 
 
-        Somos un equipo de locuelos que se dedica a hacer jugar a muuuucha gente. 
-        Sí, mucha gente a la vez. 
-        
-        <p class="nc">¿Cómo empezamos?</p>
-
-        Pues en medio del caos del confinamiento del covid, 
-        decidimos convertirnos en el entretenimiento favorito de decenas de familiares y amigos. 
-        Pero eso no fue suficiente para nuestros apetitos desenfrenados de diversión, 
-        así que incorporamos a nuestras historias vídeos muy, pero que  muy locos, para hacer reír a centenares de personas. 
-
-        <p>Y ahora, nos lanzamos a las redes sociales y a la web para llevar nuestros juegos masivos a miles de participantes. 
-          Y es que claro, el desafío final no podía ser otro que <span class="nc">hacer jugar a millones de personas juntas.</span> </p>
-
-        <p>¿Estás listo para unirte a la diversión masiva?</p>
+          Somos un equipo de locuelos que se dedica a hacer jugar a muuuucha gente. 
+          Sí, mucha gente a la vez. 
           
-        Prepárate para la experiencia COLOSAL, 
-        donde <span class="nc">la diversión alcanza proporciones épicas.</span>
+          <p class="nc">¿Cómo empezamos?</p>
+
+          Pues en medio del caos del confinamiento del covid, 
+          decidimos convertirnos en el entretenimiento favorito de decenas de familiares y amigos. 
+          Pero eso no fue suficiente para nuestros apetitos desenfrenados de diversión, 
+          así que incorporamos a nuestras historias vídeos muy, pero que  muy locos, para hacer reír a centenares de personas. 
+
+          <p>Y ahora, nos lanzamos a las redes sociales y a la web para llevar nuestros juegos masivos a miles de participantes. 
+            Y es que claro, el desafío final no podía ser otro que <span class="nc">hacer jugar a millones de personas juntas.</span> </p>
+
+          <p>¿Estás listo para unirte a la diversión masiva?</p>
+            
+          Prepárate para la experiencia COLOSAL, 
+          donde <span class="nc">la diversión alcanza proporciones épicas.</span>
+        </div>
+
+        <p class="title" id="quienessomos">¿Quiénes somos?</p>
+
+        <p>Nuestra increíble Junta Directiva lidera este circo de risas y entretenimiento: </p>
+
+        <span class="title" id="color1">Alfonso de Rueda</span> (Receptor de Jamones), la mente pensante que mantiene los engranajes funcionando.
+        
+        <p><span class="title" id="color2">Pablo Hermida</span> (Artista tecnológico digital), el mago del código que ha llevado nuestra web al siglo XXI.</p>
+
+        <span class="title" id="color3">Aïda Márquez</span> (Musa del Juego Masivo), la cara, la sonrisa, las ganas y la creatividad, ¡todo en una!
+        
+        <p><span class="title" id="color4">Dàlia Crespo</span> (Mensajera de Luz) la mano en la sombra, que habla mucho, hace poco y se divierte con colorinchis.</p>
+
+        <span class="title" id="color5">Paco Gómez</span> (FEO, Fun Executive Officer). El alma mater de todo este tinglado. Le echa más ganas que nadie... ¡y siempre tiene razón!
+        
+        <p class="itl">¡Estamos locos, pero también contamos con colaboradores en juegos concretos!</p>
       </div>
 
-      <p class="title" id="quienessomos">¿Quiénes somos?</p>
-
-      <p>Nuestra increíble Junta Directiva lidera este circo de risas y entretenimiento: </p>
-
-      <span class="title" id="color1">Alfonso de Rueda</span> (Receptor de Jamones), la mente pensante que mantiene los engranajes funcionando.
+      <div id="como" class="opcionesMenu">
+        <video width="100%" height="auto" autoplay controls>
+          <source src="img/Presentación.mp4" type="video/mp4">
+          Tu buscador no soporta el video
+        </video>
       
-      <p><span class="title" id="color2">Pablo Hermida</span> (Artista tecnológico digital), el mago del código que ha llevado nuestra web al siglo XXI.</p>
-
-      <span class="title" id="color3">Aïda Márquez</span> (Musa del Juego Masivo), la cara, la sonrisa, las ganas y la creatividad, ¡todo en una!
-      
-      <p><span class="title" id="color4">Dàlia Crespo</span> (Mensajera de Luz) la mano en la sombra, que habla mucho, hace poco y se divierte con colorinchis.</p>
-
-      <span class="title" id="color5">Paco Gómez</span> (FEO, Fun Executive Officer). El alma mater de todo este tinglado. Le echa más ganas que nadie... ¡y siempre tiene razón!
-      
-      <p class="itl">¡Estamos locos, pero también contamos con colaboradores en juegos concretos!</p>
-    </div>
-
-    <div id="como" class="opcionesMenu">
-      <video width="100%" height="auto" autoplay controls>
-        <source src="img/Presentación.mp4" type="video/mp4">
-        Tu buscador no soporta el video
-      </video>
-    
-      <!--<p class="lt-small">Si quieres rellenar el turno de juego de esta semana, haz click <a href="https://forms.gle/Y3YUPpCD18P8w5wKA" target="_blank">aquí</a></p>
-      <p class="lt-small">Si quieres unirte al canal de Telegram, haz clic <a href="https://t.me/+MJlktGzpwPczZWU0" target="_blank">aquí</a></p>-->
-      <p class="title">¿CÓMO SE JUEGA?</p>
-      <p><b>Viajes Colosales</b> es un juego masivo por Internet para muuucha gente. Mucha porque es GRATIS, es sencillo y muy DIVERTIDO.
-        <p><b>Todos los lunes lanzamos una oferta</b> irresistible de una escapada loquísima para el finde. Lo que pase en el viaje dependerá de todo quisque. ¿Cómo puedo participar?
-          Tienes que <b>hacer tu reserva del viaje</b>, o sea, tu turno de juego, <b>antes del jueves</b>. Y si animas a tu familia o amigos, mucho mejor porque <b>podéis formar vuestro propio grupo de viaje</b> y reíros juntos.
-          <p>Reserva el viaje de esta semana: <a href="https://forms.gle/DUCokXWyjMbx8rmV8">Formulario</a></p>
-          <b>Y a partir de viernes, disfruta de las aventuras y desdichas</b> que sufriremos en el viaje. ¡Verás qué cachondeo! Podrás seguir las crónicas en nuestro canal de Telegram y consultar tus resultados y los de tus grupos de viaje.
-          <p>Únete al canal del juego: <a href="https://t.me/COLOSALgames">https://t.me/COLOSALgames</a></p>
-          <p>Si, además, <b>si te va el salseo</b>, puedes (opcionalmente) comentar la jugada con otros viajero en nuestro grupo de fans: <a href="https://t.me/COLOSALfans">https://t.me/COLOSALfans</a>
-            <p>Haz tu maleta. ¡Te esperamos!</p>
+        <!--<p class="lt-small">Si quieres rellenar el turno de juego de esta semana, haz click <a href="https://forms.gle/Y3YUPpCD18P8w5wKA" target="_blank">aquí</a></p>
+        <p class="lt-small">Si quieres unirte al canal de Telegram, haz clic <a href="https://t.me/+MJlktGzpwPczZWU0" target="_blank">aquí</a></p>-->
+        <p class="title">¿CÓMO SE JUEGA?</p>
+        <p><b>COLOSAL games</b> organiza juegos masivos en línea para muchísimas personas. ¡Hay tanta gente porque es GRATIS, fácil y super DIVERTIDO!
+          
+          
+          <p>Presentamos un juego especial que se desarrollará durante toda la semana. Lo que suceda en el juego dependerá de todos los participantes. ¿Cómo puedes unirte? Simplemente<b> envia tus respuestas para jugar antes del domingo a las 21.00h.</b>
+            
+            
+            <p>Para participar rellena este formulario: <a href="https://forms.gle/DUCokXWyjMbx8rmV8">Formulario</a></p>
+            
+            
+            <p>Después espera atento a<b> los resultados:</b> podrás consultarlos<b> a partir del lunes 11 de diciembre.</b> <em>¡Te aseguro que te divertirás un montón! </em></p>
+            
+            <p>Únete al canal del juego: <a href="https://t.me/COLOSALgames">https://t.me/COLOSALgames</a></p>
+            <p>Si, además, <b>si te va el salseo</b>, puedes (opcionalmente) comentar la jugada con otros viajero en nuestro grupo de fans: <a href="https://t.me/COLOSALfans">https://t.me/COLOSALfans</a>
+              <p>Haz tu maleta. ¡Te esperamos!</p>
+            </p>
           </p>
-        </p>
-        </p>
-    </div>
+          </p>
+      </div>
+    </span>
 
     <div id="actual" class="opcionesMenu">
-      <p>¡Bienvenidos a la COLOSAL Travel Agency, donde los viajes son tan alocados como nosotros! 
-        ¿Aburridas excursiones? ¡Eso no es lo nuestro! En COLOSAL, llevamos la emoción a un nuevo nivel.</p>
-
-      <p>Imagina viajar alrededor del mundo resolviendo pruebas divertidísimas, desde buscar tesoros en la 
-        Torre Eiffel hasta desentrañar enigmas en la Gran Muralla China. ¡Nuestros viajes son como una montaña rusa de diversión!</p>
-    
-      <p>En COLOSAL, no solo te llevamos a lugares increíbles, ¡te lanzamos a aventuras épicas! Si buscas 
-        un viaje que desafíe tus límites y te haga reír a carcajadas, ¡somos tu elección!</p>
       
-      <p>Y eso no es todo, nuestra guía turística es experta en diversión y está lista para sorprenderte 
-        en cada esquina del mundo. ¿Preparado para una experiencia de viaje que nunca olvidarás? Entonces, 
-        ¡únete a COLOSAL Travel Agency y déjate llevar por el caos alegre de nuestras travesías!</p>
+      <span class="body">
+        <img src="img/Como-Alfredo-por-su-casa_juego.jpg" style="width: 225px;  margin: auto; margin-top: 10px; margin-bottom: 10px; display: block;">
+
+        <p>
+          <p class="title">¿Listos para la dosis de diversión tamaño Colosal? </p>
+
+          Hemos preparado un juego  especial para el programa 'Como Alfredo por su Casa'. 
+          Un juego masivo de Colosal Games que pondrá patas arriba hasta el sofá más tranquilo. 
+          ¡Prepárense para reír, competir y disfrutar a lo grande con el toque único de Colosal!
+
+          <p>Juega con nosotros rellenando este <a href="https://forms.gle/DUCokXWyjMbx8rmV8" target="_blank">FORMULARIO</a>.</p>
+
+          Te explicamos cómo se juega <a href="https://colosalgames.com?como" target="_blank">aqui</a>.
+        </p>
+        <p class="title" style="font-size: smaller; margin-bottom: 0;">La Policía registra y clausura la agencia Viajes Colosales</p>
+          <span style="font-size: xx-small;">La Interpol anda tras la pista de la banda de estafadores</span>
+      </span>
+
+      <p>
+        <div class="grid">
+          <img src="img/cerrado.jpg" alt="cerrado">
+          <p>
+            Un operativo internacional venía rastreando a la organización criminal desde hacía meses. 
+            Los responsables de la mayor ESTAFA del siglo huyeron precipitadamente a las Islas Caimán cuando iban a ser detenidos. 
+            Actualmente, se encuentran en paradero desconocido. La Interpol ha dado la orden de BUSCA  CAPTURA.
+          </p>
+        </div>
+
+
+
+        <span class="body">
+          <b>
+            La banda contaba con instalaciones en el Cerrato palentino donde la Policía se ha incautado de absurdos escenarios lunares de porespán y dinosaurios de cartón piedra.
+            No se han revelado más detalles de la operación, que se encuentra bajo SECRETO DEL SUMARIO.
+          </b>
+        </span>
+  
+      </p>
+
+
+
+      <span class="body">
+        <div class="line"></div>
+        
+        <p>¡Bienvenidos a la COLOSAL Travel Agency, donde los viajes son tan alocados como nosotros! 
+          ¿Aburridas excursiones? ¡Eso no es lo nuestro! En COLOSAL, llevamos la emoción a un nuevo nivel.</p>
+
+        <p>Imagina viajar alrededor del mundo resolviendo pruebas divertidísimas, desde buscar tesoros en la 
+          Torre Eiffel hasta desentrañar enigmas en la Gran Muralla China. ¡Nuestros viajes son como una montaña rusa de diversión!</p>
       
-      <p>Viaja con nosotros y descubre por qué COLOSAL es sinónimo de diversión sin fin. 
-        ¡No es solo un viaje, es una locura controlada!</p>
-      
-      <p>¡COLOSAL Travel Agency... donde los viajes se vuelven épicos y la diversión es infinita!</p>
+        <p>En COLOSAL, no solo te llevamos a lugares increíbles, ¡te lanzamos a aventuras épicas! Si buscas 
+          un viaje que desafíe tus límites y te haga reír a carcajadas, ¡somos tu elección!</p>
+        
+        <p>Y eso no es todo, nuestra guía turística es experta en diversión y está lista para sorprenderte 
+          en cada esquina del mundo. ¿Preparado para una experiencia de viaje que nunca olvidarás? Entonces, 
+          ¡únete a COLOSAL Travel Agency y déjate llevar por el caos alegre de nuestras travesías!</p>
+        
+        <p>Viaja con nosotros y descubre por qué COLOSAL es sinónimo de diversión sin fin. 
+          ¡No es solo un viaje, es una locura controlada!</p>
+        
+        <p>¡COLOSAL Travel Agency... donde los viajes se vuelven épicos y la diversión es infinita!</p>
 
-      <select class="dropdown" id="menu2">
-        <option value="Oktoberfest">30/10/23-OKTOBERFEST</option>
-        <option value="Luna">07/10/23-LUNA</option>
-        <option value="Dino">14/10/23-JURASSIC FUN</option>
-        <option value="Pompeya">21/10/23-POMPEYA</option>
-        <option value="Cerrato">28/10/23-CERRATO PALENTINO</option>
-        <option value="Halloween">04/11/23-ESPECIAL HALLOWEEN</option>
-        <option value="Egipto">11/11/23-EGIPTO</option>
-        <option value="DAU">18/11/23-DAU</option>
-      </select>
+        <select class="dropdown" id="menu2">
+          <option value="Oktoberfest">30/10/23-OKTOBERFEST</option>
+          <option value="Luna">07/10/23-LUNA</option>
+          <option value="Dino">14/10/23-JURASSIC FUN</option>
+          <option value="Pompeya">21/10/23-POMPEYA</option>
+          <option value="Cerrato">28/10/23-CERRATO PALENTINO</option>
+          <option value="Halloween">04/11/23-ESPECIAL HALLOWEEN</option>
+          <option value="Egipto">11/11/23-EGIPTO</option>
+          <option value="DAU">18/11/23-DAU</option>
+        </select>
 
-      <div id="Oktoberfest" class="opcionesMenu2">
-        COLOSAL, impressive travel agency, PRESENTA:
-        <p class="title" id="aventura">¿LISTO PARA LA AVENTURA CERVECERA?</p>
-        <p>Sumérgete en la cultura alemana mientras disfrutas de la cerveza más auténtica y la diversión más desenfrenada que puedas imaginar.</p>
+        <div id="Oktoberfest" class="opcionesMenu2">
+          COLOSAL, impressive travel agency, PRESENTA:
+          <p class="title" id="aventura">¿LISTO PARA LA AVENTURA CERVECERA?</p>
+          <p>Sumérgete en la cultura alemana mientras disfrutas de la cerveza más auténtica y la diversión más desenfrenada que puedas imaginar.</p>
 
-        <img src="img/Oktoberfest.jpg" alt="Oktoberfest" style="width:100%;">
-      </div>
+          <img src="img/Oktoberfest.jpg" alt="Oktoberfest" style="width:100%;">
+        </div>
 
-      <div id="Luna" class="opcionesMenu2">
-        COLOSAL, impressive travel agency, PRESENTA:
-        <p class="title" id="aventura">¿LISTO PARA DESPEGAR HACIA LA LUNA?</p>
-        <p>¡No pierdas la oportunidad de ser un auténtico explorador lunar! Inscríbete hoy mismo y comienza la cuenta atrás para la aventura de tu vida.</p>
+        <div id="Luna" class="opcionesMenu2">
+          COLOSAL, impressive travel agency, PRESENTA:
+          <p class="title" id="aventura">¿LISTO PARA DESPEGAR HACIA LA LUNA?</p>
+          <p>¡No pierdas la oportunidad de ser un auténtico explorador lunar! Inscríbete hoy mismo y comienza la cuenta atrás para la aventura de tu vida.</p>
 
-        <img src="img/Luna.jpg" alt="Luna" style="width:100%;">
-      </div>
+          <img src="img/Luna.jpg" alt="Luna" style="width:100%;">
+        </div>
 
-      <div id="Dino" class="opcionesMenu2">
-        COLOSAL, impressive travel agency, PRESENTA:
-        <p class="title" id="aventura">¿ABURRIDO DE LA RUTINA DIARIA?</p>
-        <p>Únete a nuestro safari en el tiempo y conviértete en un explorador jurásico. Reserva ahora y embárcate en un viaje lleno de aventuras, risas y dinosaurios juguetones.</p>
+        <div id="Dino" class="opcionesMenu2">
+          COLOSAL, impressive travel agency, PRESENTA:
+          <p class="title" id="aventura">¿ABURRIDO DE LA RUTINA DIARIA?</p>
+          <p>Únete a nuestro safari en el tiempo y conviértete en un explorador jurásico. Reserva ahora y embárcate en un viaje lleno de aventuras, risas y dinosaurios juguetones.</p>
 
-        <img src="img/Dino.jpg" alt="Jurassic fun" style="width:100%;">
-      </div>
+          <img src="img/Dino.jpg" alt="Jurassic fun" style="width:100%;">
+        </div>
 
-      <div id="Pompeya" class="opcionesMenu2">
-        COLOSAL, impressive travel agency, PRESENTA:
-        <p class="title" id="aventura">¿PREPARADO PARA UNA AVENTURA ARDIENTE?</p>
-        <p>Estás invitado a la fiesta más explosiva de la historia. Un viaje en el tiempo lleno de lava, cenizas y diversión garantizada. ¡No necesitas bañador, pero sí nervios de acero!
-        </p>
+        <div id="Pompeya" class="opcionesMenu2">
+          COLOSAL, impressive travel agency, PRESENTA:
+          <p class="title" id="aventura">¿PREPARADO PARA UNA AVENTURA ARDIENTE?</p>
+          <p>Estás invitado a la fiesta más explosiva de la historia. Un viaje en el tiempo lleno de lava, cenizas y diversión garantizada. ¡No necesitas bañador, pero sí nervios de acero!
+          </p>
 
-        <img src="img/Pompeya.jpg" alt="Pompeya" style="width:100%;">
-      </div>
+          <img src="img/Pompeya.jpg" alt="Pompeya" style="width:100%;">
+        </div>
 
-      <div id="Cerrato" class="opcionesMenu2">
-        COLOSAL, impressive travel agency, PRESENTA:
-        <p class="title" id="aventura">¿PREPARADO PARA REDEFINIR TUS LÍMITES?</p>
-        <p>Únete a nosotros en esta inolvidable y alocada experiencia en el Cerrato Palentino, donde la diversión nunca termina y los recuerdos son siempre extravagantes!
-        </p>
+        <div id="Cerrato" class="opcionesMenu2">
+          COLOSAL, impressive travel agency, PRESENTA:
+          <p class="title" id="aventura">¿PREPARADO PARA REDEFINIR TUS LÍMITES?</p>
+          <p>Únete a nosotros en esta inolvidable y alocada experiencia en el Cerrato Palentino, donde la diversión nunca termina y los recuerdos son siempre extravagantes!
+          </p>
 
-        <img src="img/Cerrato.jpg" alt="Cerrato" style="width:100%;">
-      </div>
+          <img src="img/Cerrato.jpg" alt="Cerrato" style="width:100%;">
+        </div>
 
-      <div id="Halloween" class="opcionesMenu2">
-        COLOSAL, impressive travel agency, PRESENTA:
-        <p class="title" id="aventura">¿SUSTO O RISA?</p>
-        <p class="title" id="aventura">¡SUSTO Y RISA!</p>
-        <p>Un viaje aterradoramente divertido donde los monstruos son sólo un poco menos aterradores que los precios de los hoteles.
-        </p>
+        <div id="Halloween" class="opcionesMenu2">
+          COLOSAL, impressive travel agency, PRESENTA:
+          <p class="title" id="aventura">¿SUSTO O RISA?</p>
+          <p class="title" id="aventura">¡SUSTO Y RISA!</p>
+          <p>Un viaje aterradoramente divertido donde los monstruos son sólo un poco menos aterradores que los precios de los hoteles.
+          </p>
 
-        <img src="img/Halloween.jpg" alt="Cerrato" style="width:100%;">
-      </div>
+          <img src="img/Halloween.jpg" alt="Cerrato" style="width:100%;">
+        </div>
 
-      <div id="Egipto" class="opcionesMenu2">
-        COLOSAL, impressive travel agency, PRESENTA:
-        <p class="title" id="aventura">¿TE ATREVES A DEJARTE ARRASTRAR POR EL NILO DE LAS RISAS?</p>
-        <p>Prepárate para una experiencia trna estrambólica que incluso Cleopatra estaría celosa. ¡Egipto nunca ha sido tan divertido! ¿Te atreves a unirte a esta extravagante odisea, donde lo absurdo de convierte en aventura?
-        </p>
+        <div id="Egipto" class="opcionesMenu2">
+          COLOSAL, impressive travel agency, PRESENTA:
+          <p class="title" id="aventura">¿TE ATREVES A DEJARTE ARRASTRAR POR EL NILO DE LAS RISAS?</p>
+          <p>Prepárate para una experiencia trna estrambólica que incluso Cleopatra estaría celosa. ¡Egipto nunca ha sido tan divertido! ¿Te atreves a unirte a esta extravagante odisea, donde lo absurdo de convierte en aventura?
+          </p>
 
-        <img src="img/Egipto.jpg" alt="Cerrato" style="width:100%;">
-      </div>
+          <img src="img/Egipto.jpg" alt="Cerrato" style="width:100%;">
+        </div>
 
-      <div id="DAU" class="opcionesMenu2">
-        COLOSAL, impressive travel agency, PRESENTA:
-        <p class="title" id="aventura">¿LISTO PARA LA GRAN FIESTA DEL JUEGO?</p>
-        <p>¡Vive la magia del Festival Dau en Barcelona! Descubre experiencias inolvidables, juegos fascinantes y un ambiente único. Únete a la aventura. ¿tu viaje hacia la diversión comienza aquí!</p>
+        <div id="DAU" class="opcionesMenu2">
+          COLOSAL, impressive travel agency, PRESENTA:
+          <p class="title" id="aventura">¿LISTO PARA LA GRAN FIESTA DEL JUEGO?</p>
+          <p>¡Vive la magia del Festival Dau en Barcelona! Descubre experiencias inolvidables, juegos fascinantes y un ambiente único. Únete a la aventura. ¿tu viaje hacia la diversión comienza aquí!</p>
 
-        <img src="img/DAU.jpg" alt="DAU" style="width:100%;">
-      </div>
+          <img src="img/DAU.jpg" alt="DAU" style="width:100%;">
+        </div>
+
+      </span>
     </div>
 
     <div id="contacto" class="opcionesMenu">
